@@ -77,6 +77,7 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 > > ## Customize bootstrap
 >
 > - 만약 bootstrap의 테마 또는 어떠한 bootstrap 변수들을 커스터마이징하길 윈한다면 custom Sass file을 만들 수 있다.
+>
 >   ```scss
 >   /* custom.scss */
 >
@@ -89,7 +90,9 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 >   /* import bootstrap to set changes */
 >   @import '~bootstrap/scss/bootstrap';
 >   ```
+>
 > - 그리고 main Sass file 에서 custom Sass file을 import 하면 된다.
+>
 >   ```scss
 >   // src/App.scss
 >
