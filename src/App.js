@@ -1,10 +1,12 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Flexbox from './conponents/Flexbox';
+import NavComponent from './conponents/nav';
+import Home from './pages/Home.tsx';
 function App() {
   return (
     <div className="App">
-      <Flexbox />
+      <NavComponent />
+      <Home />
     </div>
   );
 }

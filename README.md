@@ -44,7 +44,7 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 > > ## bootstrap 이란?
 >
 > - 반응형 웹프로젝트 개발을 위한 가장 인기있는 HTML, CSS, JS 프레임워크
-> - 각종 UI 요소들에 대한 css style과 레이아웃 정렬을 class 만으로 제어할 수 있음.
+> - 각종 UI 요소들에 대한 css style과 레이아웃 정렬을 className 만으로 제어할 수 있음.
 >
 >   > ## 컴포넌트 import
 >
@@ -109,7 +109,7 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 >
 >   > ## 사용 방법
 >
-> - 레이아웃 등의 부트스트랩 기능은 class 이름으로 제어한다.
+> - 레이아웃 등의 부트스트랩 기능은 className 이름으로 제어한다.
 > - 부트스트랩 아이콘은 \***\*Glyphicons , bootstrap-icons\*\*** 두 가지 종류가 있다.
 >
 >   ### 레이아웃
@@ -128,30 +128,29 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 >
 >    <img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/467c3d4d-65c9-4fe3-9820-fe1ae03bd723/Untitled.png"/>
 >
->
 >   ### \***\*Glyphicons\*\*** 아이콘
 >
 >   - [bootstrapk.com](http://bootstrapk.com/components)에서 원하는 UI를 가져와 사용하면 된다.
->   - 아이콘 class는 다른 컴포넌트와 직접 섞일 수 없으므로 다른 클래스와 함께 사용하지 않도록 한다.
->   - 아이콘 class는 텍스트나 child가 없는 요소에만 사용되어야 한다.
+>   - 아이콘 className는 다른 컴포넌트와 직접 섞일 수 없으므로 다른 클래스와 함께 사용하지 않도록 한다.
+>   - 아이콘 className는 텍스트나 child가 없는 요소에만 사용되어야 한다.
 >
 >     ```tsx
 >     // Bad
->     <span class="glyphicon glyphicon-plus">add</span>
+>     <span className="glyphicon glyphicon-plus">add</span>
 >
 >     // Bad
->     <span class="glyphicon glyphicon-plus">
+>     <span className="glyphicon glyphicon-plus">
 >     	<a href="#"/>
 >     	<p>this is a example</p>
 >     </span>
 >
 >     // Good
->     <span class="glyphicon glyphicon-plus"/>
+>     <span className="glyphicon glyphicon-plus"/>
 >     ```
 >
 >   - 스크린리더에서 의도치 않고 혼란스러운 출력을 피하기 위해 `aria-hidden=”true”` 속성으로 숨긴다.
 >     ```tsx
->     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+>     <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
 >     ```
 >   - 만약, 텍스트가 없는 아이콘을 만든다면, 그 아이콘의 목적을 식별할 수 있는 대체 콘텐츠(aria-label 등)를 제공해야한다.
 >
@@ -160,21 +159,21 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 >         <img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/edc2e91a-5d95-42c7-adf8-8a436028032e/Untitled.png"/>
 >
 >     ```tsx
->     <button type="button" class="btn btn-default" aria-label="Left Align">
->       <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+>     <button type="button" className="btn btn-default" aria-label="Left Align">
+>       <span className="glyphicon glyphicon-align-left" aria-hidden="true"></span>
 >     </button>
 >
->     <button type="button" class="btn btn-default btn-lg">
->       <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+>     <button type="button" className="btn btn-default btn-lg">
+>       <span className="glyphicon glyphicon-star" aria-hidden="true"></span> Star
 >     </button>
 >     ```
 >
 >      <img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c493c05f-0beb-453a-8584-94258da831f6/Untitled.png"/>
 >      
 >      ```tsx
->      <div class="alert alert-danger" role="alert">
->        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
->        <span class="sr-only">Error:</span>
+>      <div className="alert alert-danger" role="alert">
+>        <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+>        <span className="sr-only">Error:</span>
 >        Enter a valid email address
 >      </div>
 >      ```
@@ -182,7 +181,7 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 >   ### **Bootstrap 아이콘**
 >
 >   - 1,500여개의 아이콘이 있는 무료 고품질 오픈 소스 아이콘 라이브러리.
->   - [getbootstrap](https://icons.getbootstrap.kr/) 페이지에서 필요한 아이콘의 class를 가져다 쓰면 된다.
+>   - [getbootstrap](https://icons.getbootstrap.kr/) 페이지에서 필요한 아이콘의 className를 가져다 쓰면 된다.
 >
 >     ```bash
 >     $npm i react-bootstrap-icons
@@ -203,14 +202,21 @@ react-bootstrap 라이브러리에 대한 학습 내용 및 실습 내용들에 
 >   - 요소가 넓어진다거나 모서리가 없어지는 등 원치 않는 부작용을 피하기 위해 옵션 `container: ‘body’` 을 명시해야함.
 >   - 정확한 `role` 속성을 부여하고 `aria-label`을 제공하는 것을 추천
 >   - 예제
+>
 >     - .btn로 된 일련의 버튼들을 .btn-group으로 감싸기
 >       <img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/51f7089b-a2b6-491a-903b-2922c37564dd/Untitled.png"/>
->       
+>
 >       ```tsx
->       <div class="btn-group" role="group" aria-label="...">
->         <button type="button" class="btn btn-default">Left</button>
->         <button type="button" class="btn btn-default">Middle</button>
->         <button type="button" class="btn btn-default">Right</button>
+>       <div className="btn-group" role="group" aria-label="...">
+>         <button type="button" className="btn btn-default">
+>           Left
+>         </button>
+>         <button type="button" className="btn btn-default">
+>           Middle
+>         </button>
+>         <button type="button" className="btn btn-default">
+>           Right
+>         </button>
 >       </div>
 >       ```
 

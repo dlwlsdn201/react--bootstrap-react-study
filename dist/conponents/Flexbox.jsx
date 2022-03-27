@@ -1,24 +1,29 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const react_bootstrap_1 = require("react-bootstrap");
-const react_bootstrap_icons_1 = require("react-bootstrap-icons");
-require("../styles/Flexbox/index.css");
+'use strict';
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
+Object.defineProperty(exports, '__esModule', { value: true });
+const react_1 = __importDefault(require('react'));
+const react_bootstrap_1 = require('react-bootstrap');
+const react_bootstrap_icons_1 = require('react-bootstrap-icons');
+require('../styles/Flexbox/index.css');
 const Flexbox = () => {
-    const setButtons = () => {
-        const array = [{ title: 'one' }, { title: 'two' }, { title: 'three' }];
-        let result;
-        result = array.map((obj, index) => (<react_bootstrap_1.Button variant="outline-warning">{`${obj.title}-${index}`}</react_bootstrap_1.Button>));
-        return result;
-    };
-    return (<div className="container">
+  const setButtons = () => {
+    const array = [{ title: 'one' }, { title: 'two' }, { title: 'three' }];
+    let result;
+    result = array.map((obj, index) => (
+      <react_bootstrap_1.Button variant="outline-warning">{`${obj.title}-${index}`}</react_bootstrap_1.Button>
+    ));
+    return result;
+  };
+  return (
+    <div className="container">
       <section className="section section-1">
         <div>
           <span>
-            <react_bootstrap_icons_1.BootstrapFill size={80}/>
+            <react_bootstrap_icons_1.BootstrapFill size={80} />
           </span>
         </div>
       </section>
@@ -43,6 +48,7 @@ const Flexbox = () => {
           </button>
         </div>
       </section>
-    </div>);
+    </div>
+  );
 };
 exports.default = Flexbox;
