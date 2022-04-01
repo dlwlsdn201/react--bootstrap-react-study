@@ -1,10 +1,11 @@
+import '../styles/home/index.css';
 import React from 'react';
 
 const Home = () => {
   return (
     <div>
       <main className="container">
-        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark intro-card">
           <div className="col-md-6 px-0">
             <h1 className="display-4 fst-italic">게으른 완벽주의 INFJ</h1>
             <p className="lead my-3">개발 중</p>
